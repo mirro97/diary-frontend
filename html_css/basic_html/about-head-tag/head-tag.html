@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title: 검색 최적화에 필수적임, 각 페이지에 맞게 다르게 작성, 함축적으로 길게 표현 -->
+    <title>뉴욕치킨의 HTML/CSS</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <style>
+        h1{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>뉴욕치킨</h1>
+    <p>안녕하세요 뉴욕치킨입니다</p><br>
+    <p style="font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';">안녕하세요 뉴욕치킨입니다</p>
+    <script src="./app.js"></script>
+    <script>
+        var h1 = document.querySelector('h1');
+        h1.addEventListener('click', function(event){
+            this.textContent = 'h1' ;  
+        })
+    </script>
+</body>
+</html>

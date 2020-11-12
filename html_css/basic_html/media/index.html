@@ -1,0 +1,40 @@
+<!-- 컨트롤이 있는 play -->
+<audio src="./assets/audios/kimbug.mp3" controls>
+</audio>
+
+<!-- 자동재생 
+<audio src="./assets/audios/kimbug.mp3" loop autoplay>
+</audio>
+-->
+
+<!-- 무한자동재생 
+<audio src="./assets/audios/kimbug.mp3" loop autoplay>
+</audio>
+-->
+
+<!-- 소스를 여러개 넣고자 할 때 (해당 익스플로러에서 작동하지 않을 경우 대비)-->
+<audio>
+    <source src="./assets/audios/kimbug.wav" type="audio/wav"/>
+
+    <source src="./assets/audios/kimbug.ogg" type="audio/ogg"/>
+
+    <source src="./assets/audios/kimbug.wav" type="audio/mpeg"/>
+
+    <!-- 모든 타입이 먹히지 않을 경우 띄워줌 : 사용자 편의성이 높아짐-->
+    <p>
+        당신의 브라우저를 버리시고 크롬을 사용하는게 어떨까요?
+    </p>
+</audio>
+
+<!-- 컨트롤이 있는 video -->
+<video src="./assets/vedios/kimbug.mov" controls></video>
+
+<video autoplay loop>
+    <source src="./assets/vedios/kimbug.mov" type="video/mp4"/>
+
+    <source src="./assets/vedios/kimbug.mp4" type="video/mp4"/>
+    <p>최신 브라우저로 업테이트 하세오..</p>
+</video>
+
+<!-- iframe 사용 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dhcfCIYLMN4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

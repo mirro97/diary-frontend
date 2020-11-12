@@ -1,0 +1,25 @@
+<h1>select 태그</h1>
+
+<!-- select는 자식요소로 option이 설정 되어있어 name을 select에만 설정해주어도 된다 -->
+
+<form accept="" method="GET">
+    <label for="skill">사용 가능한 언어 - 하나만 선택 가능</label>
+    <select name="skills" id="skill">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+    </select>
+    <button>
+        submit
+    </button>
+    </br>
+    <label for="skill">사용 가능한 언어 - 하나 이상 선택 가능(ctrl을 눌러 선택)</label>
+    <select multiple name="skills" id="skill">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+    </select>
+    <button>
+        submit
+    </button>
+</form>
