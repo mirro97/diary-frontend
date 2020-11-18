@@ -23,7 +23,7 @@ body {
 }
 
 body::after {
-  content: "NYchicken@";
+  content: "NYchicken©";
   display: block;
   margin-top: 50px;
   color: #fff;
