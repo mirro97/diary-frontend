@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Inbox</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <table class="inbox">
+        <thead class="sr-only">
+            <tr>
+                <th scope="col">Actions</th>
+                <th scope="col">Sender</th>
+                <th scope="col">Title</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="unread">
+                <td>
+                    <div class="inbox-actions">
+                        <div class="inbox-checkbox">
+                            <input type="checkbox" id="inbox-1"/>
+                            <label for="inbox-1" class="sr-only">Select this e-mail</label>
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorites</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    Goorm Edu
+                </td>
+                <td>
+                    <a href="#">
+                        <strong class="sr-only">Unread</strong>
+                        <strong>
+                            Rate your course: FRONTEND 101 뉴욕치킨
+                        </strong>
+                        <SPan> How's everything going? We want to hear your opinion on...</SPan>
+                    </a>
+                </td>
+                <td>
+                    10:43 PM
+                </td>
+            </tr>
+            <tr class="read">
+                <td>
+                    <div class="inbox-actions">
+                        <div class="inbox-checkbox">
+                            <input type="checkbox" id="inbox-1"/>
+                            <label for="inbox-1" class="sr-only">Select this e-mail</label>
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorites</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    906 스튜디오
+                </td>
+                <td>
+                    <a href="#">
+                        <strong class="sr-only">read</strong>
+                        <strong>
+                            [906스튜디오] 뉴욕치킨 고객님 상품이 발송되었습니다.
+                        </strong>
+                        <SPan>안녕하세요, 906 스튜디오입니다. 주문 내역은 아래와 같습니다.</SPan>
+                    </a>
+                </td>
+                <td>
+                    10:43 PM
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./app.js"></script>
+</body>
+</html>
