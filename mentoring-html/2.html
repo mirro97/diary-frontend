@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB - CSS</title>
     <style>
+        body {
+            margin: 0;
+        }
         #active {
             color: red;
-        }
-        .saw {
-            color: gray;
         }
         a {
             color: black;
@@ -18,34 +18,59 @@
         h1 {
             font-size: 45px;
             text-align: center;
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding: 33px;
         }
-        
+        h2 {
+            margin: 0px;
+        }
+        ol {
+            border-right: 1px solid gray;
+            width: 150px;
+            margin: 0;
+            padding: 20px;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+        }
+        #grid ol {
+            padding-left: 33px;
+        }
+        #grid #article {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>
         <a href="e-learning.html">기초부터 다지는 html</a>
     </h1>
-    <ol>
-        <li>
-            <a href="1.html" class="saw">HTML</a>       
-        </li>
-        <li>
-            <a href="2.html" class="saw" id="active">CSS</a>
-        </li>
-        <li>
-            <a href="3.html">JavaScript</a>
-        </li>
-    </ol>
-    <h2>CSS</h2>
-    <p>
-        캐스 케이 딩 스타일 시트 ( CSS은 )는 인 스타일 시트 언어 묘화에 사용되는 프리젠 테이션 에 작성하는 문서의 마크 업 언어를 같은 HTML.
-        CSS는 HTML 및 JavaScript 와 함께 World Wide Web 의 초석 기술입니다. 
-        CSS는 레이아웃 , 색상 및 글꼴을 포함하여 프레젠테이션과 콘텐츠를 분리 할 수 ​​있도록 설계되었습니다.
-        이러한 분리는 컨텐츠 접근성을 향상시키고 , 프리젠 테이션 특성의 사양에서 더 많은 유연성과 제어를 제공 하며,
-        구조적 컨텐츠의 복잡성과 반복을 줄여주는 별도의 .css 파일에 관련 CSS를 지정하여 여러 웹 페이지 에서 서식을 공유 할 수 있도록 합니다. 
-        .css 파일을 캐시 할 수 있도록 설정하여 파일을 공유하는 페이지와 해당 형식 간의 페이지로드 속도를 향상시킵니다.
-    </p>
+    <div id="grid">
+        <ol>
+            <li>
+                <a href="1.html">HTML</a>       
+            </li>
+            <li>
+                <a href="2.html" id="active">CSS</a>
+            </li>
+            <li>
+                <a href="3.html">JavaScript</a>
+            </li>
+        </ol>
+        <div id="article">
+            <h2>CSS</h2>
+            <p>
+                캐스 케이 딩 스타일 시트 ( CSS은 )는 인 스타일 시트 언어 묘화에 사용되는 프리젠 테이션 에 작성하는 문서의 마크 업 언어를 같은 HTML.
+                CSS는 HTML 및 JavaScript 와 함께 World Wide Web 의 초석 기술입니다. 
+                CSS는 레이아웃 , 색상 및 글꼴을 포함하여 프레젠테이션과 콘텐츠를 분리 할 수 ​​있도록 설계되었습니다.
+                이러한 분리는 컨텐츠 접근성을 향상시키고 , 프리젠 테이션 특성의 사양에서 더 많은 유연성과 제어를 제공 하며,
+                구조적 컨텐츠의 복잡성과 반복을 줄여주는 별도의 .css 파일에 관련 CSS를 지정하여 여러 웹 페이지 에서 서식을 공유 할 수 있도록 합니다. 
+                .css 파일을 캐시 할 수 있도록 설정하여 파일을 공유하는 페이지와 해당 형식 간의 페이지로드 속도를 향상시킵니다.
+            </p>
+        </div>
+    </div>
     
     <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" width="100%" alt="코딩 이미지">
 </body>
