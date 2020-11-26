@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var friends = {
+            "highschool": "jonghee",
+            "university": "haeyeon"
+        };
+        document.write("highschool : " + friends.highschool +"<br>");
+        document.write("university : " + friends.university +"<br>");
+        friends.middleschool = "jimin";
+        document.write("middle school : " + friends.middleschool +"<br>");
+        friends["lab"] = "seungah";
+        document.write("middle school : " + friends["lab"] +"<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        document.write("*print Object*<br>");
+        for(var key in friends){
+            document.write(key+"<br>");
+        }
+        document.write("<br> *print data* <br>");
+        for(var key in friends){
+            document.write(friends[key]+"<br>");
+        }
+    </script>
+    <h2>Method</h2>
+    <script>
+        friends.showAll = function () {
+            for(var key in friends){
+                document.write(key + " : " + friends[key] + "<br>");
+            }
+        }
+        friends.showAll();
+
+        document.write("<br>");
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        friends.showAll = function () {
+            for(var key in this){
+                document.write(key + " : " + this[key] + "<br>");
+            }
+        }
+        friends.showAll();
+    </script>
+</body>
+</html>

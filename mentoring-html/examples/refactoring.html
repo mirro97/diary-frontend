@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Refactoring</title>
+</head>
+<body>
+    <h1>night button과 day button 구현 (버튼이 2개임)</h1>
+    
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+    "> 
+
+    <h1>아래의 코드로 두개의 버튼을 합칠 수 있음</h1>
+    <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value == 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = 'day'
+        }else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = 'night'
+        }
+    ">
+
+    <h1>this 를 활용하여 코드를 더욱 단순화 할 수 있음</h1>
+    <input id="night_day" type="button" value="night" onclick="
+        if(this.value == 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day'
+        }else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night'
+        }
+    ">
+   
+   <h1>var 변수 선언을 통해 중복되는 항목을 제거한다</h1>
+    <input id="night_day" type="button" value="night" onclick="
+    var target =  document.querySelector('body');
+        if(this.value == 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day'
+        }else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night'
+        }
+    ">
+</body>
+</html>

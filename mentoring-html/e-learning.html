@@ -39,12 +39,50 @@
             padding: 20px;
         }
     </style>
+    <script>
+        function LinksSetColor(color) {
+            var list = document.querySelectorAll('a');
+            var i = 0;
+            while(i < list.length){
+                list[i].style.color = color;
+                i = i + 1;
+            }
+        }
+        function setBodyColor(color) {
+            var target =  document.querySelector('body');
+            target.style.color = color;
+        }
+        function BodySetBacgroundColor(color) {
+            var target =  document.querySelector('body');
+            target.style.backgroundColor = color;
+        }
+        function nightDayHandler(self) {
+            var target =  document.querySelector('body');
+                if(self.value == 'night'){
+                    BodySetBacgroundColor('black');
+                    setBodyColor('white');
+                    self.value = 'day'
+
+                    LinksSetColor('powderblue');
+                }else{
+                    BodySetBacgroundColor('white');
+                    setBodyColor('black');
+                    self.value = 'night'
+
+                    LinksSetColor('orange');
+                }
+        }
+    </script>
 </head>
 
 <body>
     <h1>
-        <a href="e-learning.html">기초부터 다지는 html</a>
+        <a href="e-learning.html" style="color: orange;">기초부터 다지는 html</a>
     </h1>
+    <input id="night_day" type="button" value="night" onclick="
+       nightDayHandler(this);
+    ">
+
     <div id="grid">
         <ol>
             <li>
@@ -64,7 +102,7 @@
                 생활코딩 WEB 편을 통해 신나게 배우는 중입니다:D <br/>
                 앞으로 역동적인 페이지를 만드는것을 목표로 기초를 쌓고있습니다. <br/>
             </p>
-        </div>z
+        </div>
     </div>
     
     
