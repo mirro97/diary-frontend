@@ -28,3 +28,21 @@
 
   background-color: #ffe680;
 }
+
+.box3 {
+  /* 
+    box-sizing: content-box; - 박스의 사이즈를 content에 맞춰작업한다
+    box-sizing: border-box;- 박스의 사이즈를 border box를 기준으로 작업하겠다(=영역을 border까지 보겠다는 뜻)
+    
+  */
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+
+  padding-top: 40px;
+  padding-left: 50px;
+
+  color: #fff;
+
+  background-color: #ccccff;
+}
