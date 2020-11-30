@@ -1,0 +1,100 @@
+/* (01) box-model */
+.box1 {
+  width: 200px;
+  height: 200px;
+  padding-left: 30px;
+  padding-top: 30px;
+  border: 5px solid gold;
+  /* border-radius: 테두리를 깎아준다. 50% 설정시 원이 됨  */
+  border-radius: 14px;
+
+  margin: 10px;
+
+  background-color: #ffe680;
+}
+
+.box2 {
+  width: 200px;
+  height: 200px;
+  /* 
+      <속기형>
+      top right bottom left 순서대로 한번에 작성할 수 있다 
+      (이때 top-bottom, right-left는 세트이다)
+    */
+  padding: 10px 20px 30px 40px;
+  border: 5px solid gold;
+  border-radius: 14px;
+
+  margin: 10px;
+
+  background-color: #ffe680;
+}
+
+/* (02) box-sizeing */
+.box3 {
+  /* 
+      box-sizing: content-box; - 박스의 사이즈를 content에 맞춰작업한다
+      box-sizing: border-box;- 박스의 사이즈를 border box를 기준으로 작업하겠다(=영역을 border까지 보겠다는 뜻)
+      
+    */
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+
+  padding-top: 40px;
+  padding-left: 50px;
+
+  color: #fff;
+
+  background-color: #ccccff;
+}
+
+/* (03) display: block */
+.parent {
+  background-color: lavender;
+}
+
+.child,
+.other {
+  height: 50px;
+  color: black;
+  line-height: 50px;
+  text-indent: 20px;
+}
+
+.child {
+  width: 500px;
+  background-color: mediumpurple;
+}
+
+.other {
+  width: 100px;
+  background-color: coral;
+}
+
+/* (04) display: inline 
+width, height, padding-top, padding-bottom, border-top, border-bottom, margin-top, margin-bottom 사용 불가능 
+=줄간격의 흐름을 방해하기 때문
+*/
+strong {
+  columns: #fff;
+  background-color: blue;
+  padding-left: 40px;
+  padding-right: 60px;
+  display: inline;
+  /*
+  버그와 마찬가지! 위에 있는 텍스트를 덮어버리게 된다 
+  padding-top: 60px; 
+  */
+}
+
+/* (05) display: inline-block */
+span {
+  columns: #fff;
+  background-color: orange;
+  padding-left: 40px;
+  padding-right: 60px;
+
+  padding-top: 60px;
+  display: inline-block;
+}
