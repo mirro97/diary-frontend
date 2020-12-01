@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+div {
+  display: block;
+}
+
+.parent {
+  background-color: lightgray;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.child {
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  float: left;
+}
+
+.other {
+  background-color: black;
+  color: white;
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: orange;
+}
+
+.blue {
+  background-color: mediumblue;
+}
