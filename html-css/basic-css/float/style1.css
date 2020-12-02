@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+  background-color: black;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* 
+tab-menu {
+  overflow: hidden;
+} */
+
+.tab-menu {
+  max-width: 540px;
+  background-color: white;
+  border-bottom: 0.5px solid #8492a6;
+}
+
+.tab-menu::after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab-menu-item a {
+  display: block;
+  padding: 16px 20px;
+}
+
+.tab-menu-item.selected {
+  border-bottom: 2px solid blue;
+}
+
+.tab-menu-item.selected a {
+  font-weight: 500;
+  color: blue;
+}
