@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+  background-color: black;
+}
+
+ul {
+  background-color: white;
+  max-width: 540px;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: left;
+}
+
+.tab-menu {
+  border-bottom: 0.5px solid #8492a6;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab-menu-item a {
+  display: block;
+  padding: 16px 20px;
+}
+
+.tab-menu-item.selected a {
+  color: blue;
+  font-weight: 500;
+}
+
+.tab-menu-item.selected {
+  border-bottom: 2px solid blue;
+}
