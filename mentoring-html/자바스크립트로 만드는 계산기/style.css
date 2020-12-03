@@ -3,12 +3,14 @@
   margin: 0;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: -0.02em;
+#calculator {
+  width: 200px;
+  background-color: lavender;
+  border: 0.5px solid lavender;
 }
 
-.calculator {
-  width: 400px;
-  background-color: lightgray;
+#output-display,
+#input-display {
+  height: 20px;
+  background-color: white;
 }
