@@ -45,11 +45,9 @@ for(var i = 0; i<operator.length; i++) {
 }
 
 document.getElementById('equal').addEventListener('click', function(){
-    if (input_value.innerText !== "") {
+    if(input_value.innerText !== "") {
         input_value.innerText = eval(output_value.innerText + input_value.innerText);
         empty(output_value);
-    }else{
-        return;
     }
 });
 
