@@ -1,4 +1,40 @@
+const calculator = document.querySelector('.calculator');
+const display = calculator.querySelector('.input-display');
+const keys = calculator.querySelector('.calculator-keys');
 
+keys.addEventListener('click', event =>{
+    const clicked = event.target;
+    const clickedValue  = clicked.textContent;
+    const displayValue = display.textContent;
+    const {type} = clicked.dataset;
+    const {previousKeyType} = calculator.dataset;
+
+    if( type === 'clear'){
+        display.textContent = '0';
+    }
+    
+    if( type === 'number'){
+        if(displayValue === '0'){
+            display.textContent = clickedValue;
+        }else if(previousKeyType === 'operator'){
+            display.textContent = clickedValue;
+        }else{
+            display.textContent += clickedValue;
+        }
+    }
+
+    if( type === 'operator'){
+        const operatorKey = clicked.querySelectorAll('[data-type="operator"]');
+        operatorKey.forEach(element => {element.dataset.state = ''})
+        clicked.dataset.state = 'selected';
+    }
+
+    if(type === 'equal') {
+
+    }
+
+    calculator.dataset.previousKeyType = type;
+});
 
 // const output_value = document.getElementById('output-display');
 // const input_value = document.getElementById('input-display');
