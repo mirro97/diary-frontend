@@ -23,6 +23,14 @@ keys.addEventListener('click', event =>{
         }
     }
 
+    if(type === 'dot'){
+        if(displayValue === '0'){
+            display.textContent = '0' + clickedValue;
+        }else{
+            display.textContent += clickedValue;
+        }
+    }
+
     if( type === 'operator'){
         const operatorKey = clicked.querySelectorAll('[data-type="operator"]');
         operatorKey.forEach(element => {element.dataset.state = ''})
@@ -33,73 +41,27 @@ keys.addEventListener('click', event =>{
     }
 
     if(type === 'equal') {
-        const firstNumber = parseInt(calculator.dataset.firstNumber);
+        const firstNumber = calculator.dataset.firstNumber;
         const operator = calculator.dataset.operator;
-        const secondNumber = parseInt(displayValue);
-        let result = '';
+        const secondNumber = displayValue;
 
-        if(operator === 'plus') result = firstNumber + secondNumber;
-        if(operator === 'minus') result = firstNumber - secondNumber;
-        if(operator === 'divide') result = firstNumber / secondNumber;
-        if(operator === 'times') result = firstNumber * secondNumber;
-
-        display.textContent = result;
+        display.textContent = calculate(firstNumber, operator, secondNumber);
+        console.log(display.textContent);
     }
 
     calculator.dataset.previousKeyType = type;
 });
 
-// const output_value = document.getElementById('output-display');
-// const input_value = document.getElementById('input-display');
-// const value = document.querySelectorAll('.number');
-// const operator = document.querySelectorAll('.operator');
-
-// const empty = (element) =>{
-//     element.innerText = "";
-// };
-
-// document.getElementById('claer').addEventListener('click', function(){
-//     empty(output_value);
-//     empty(input_value);
-// });
-
-// document.getElementById('claer').addEventListener('click', function(){
-//     input_value.innerText = "";
-// });
-
-// document.getElementById('dot').addEventListener('click', function(){
-//     if(input_value.innerText.includes('.')) return;
-
-//     input_value.innerText += this.innerText;
-// });
-
-// for(var i = 0; i<value.length; i++) {
-//     value[i].addEventListener('click', function(){
-//         input_value.innerText += this.innerText;
-//     });
-// }
-
-// for(var i = 0; i<operator.length; i++) {
-//     operator[i].addEventListener('click', function(){
-//         if (input_value.innerText !== "") {
-//             if (output_value.innerText === "") {
-//                 output_value.innerText = input_value.innerText + " " + this.innerText;
-//             } else {
-//                 output_value.innerText = output_value.innerText + " " + input_value.innerText + " " + this.innerText;
-//             }
-//         }
-//         if (input_value.innerText === "" && output_value.innerText !== "") {
-//             output_value.innerText = output_value.innerText.slice(0, -1) + " " + this.innerText;
-//         }
-//         empty(input_value);
-//     });
-// }
-
-// document.getElementById('equal').addEventListener('click', function(){
-//     if(input_value.innerText !== "") {
-//         input_value.innerText = eval(output_value.innerText + input_value.innerText);
-//         empty(output_value);
-//     }
-// });
-
-
+function calculate(firstNumber, operator, secondNumber){
+    firstNumber = Number(firstNumber);
+    secondNumber = Number(secondNumber);
+    let result = '';
+        
+    switch(operator){
+        case 'plus': result = firstNumber + secondNumber; break;
+        case 'minus': result = firstNumber - secondNumber; break;
+        case 'divide': result = firstNumber / secondNumber; break;
+        case 'times': result = firstNumber * secondNumber; break;
+    }
+    return result;
+}
