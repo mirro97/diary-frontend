@@ -27,10 +27,23 @@ keys.addEventListener('click', event =>{
         const operatorKey = clicked.querySelectorAll('[data-type="operator"]');
         operatorKey.forEach(element => {element.dataset.state = ''})
         clicked.dataset.state = 'selected';
+
+        calculator.dataset.firstNumber = displayValue;
+        calculator.dataset.operator = clicked.dataset.key;
     }
 
     if(type === 'equal') {
+        const firstNumber = parseInt(calculator.dataset.firstNumber);
+        const operator = calculator.dataset.operator;
+        const secondNumber = parseInt(displayValue);
+        let result = '';
 
+        if(operator === 'plus') result = firstNumber + secondNumber;
+        if(operator === 'minus') result = firstNumber - secondNumber;
+        if(operator === 'divide') result = firstNumber / secondNumber;
+        if(operator === 'times') result = firstNumber * secondNumber;
+
+        display.textContent = result;
     }
 
     calculator.dataset.previousKeyType = type;
