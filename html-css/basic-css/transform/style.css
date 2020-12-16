@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.transform-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  background-color: lightblue;
+  /* transform: translate(100px, 100px); */
+  /* transform: scale(3); */
+  /* transform: rotate(45deg); */
+  transform: translate(100px, 100px) scale(3) rotate(45deg);
+}
