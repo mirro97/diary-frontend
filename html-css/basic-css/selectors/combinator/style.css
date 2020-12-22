@@ -1,0 +1,20 @@
+section h1 {
+  color: #0066ff;
+}
+
+section > h1 {
+  font-size: 40px;
+  color: #ff4949;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active ~ li {
+  color: blue;
+}
+
+.active + li {
+  color: #ff4949;
+}
