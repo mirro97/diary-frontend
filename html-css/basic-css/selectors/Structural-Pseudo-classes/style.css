@@ -1,0 +1,25 @@
+li:first-child {
+  color: blue;
+}
+
+li:last-child {
+  color: yellow;
+}
+
+li:nth-child(3) {
+  color: red;
+}
+
+/*
+    짝수 요소에 적용 
+    li:nth-child(2n) {
+        color: red;
+      } 
+*/
+
+/*
+    홀수 요소에 적용 
+    li:nth-child(2n-1) {
+        color: red;
+      } 
+*/
