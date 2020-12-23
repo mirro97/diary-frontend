@@ -1,0 +1,21 @@
+a:hover {
+  background-color: rgb(255, 123, 0);
+}
+
+/* :active 누르는 찰나에 스타일을 바꿈 */
+a:active {
+  background-color: rgb(245, 175, 110);
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+input:focus {
+  border-color: #ffcd28;
+}
+
+input:active {
+  border-color: #ffe65a;
+}
