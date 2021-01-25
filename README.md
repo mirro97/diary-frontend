@@ -11,5 +11,5 @@
 
 ## 2. 네이버 이용약관 폼
 
-<center><img width="336" alt="네이버회원가입-이용약관폼" src="https://user-images.githubusercontent.com/45249021/105625452-d4869200-5e6c-11eb-9c55-2a9ea5d0bba8.png"></center>
-"진행중": [Terms of service](https://mirro97.github.io/diary-frontend/JavaScript/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%EC%95%BD%EA%B4%80%20%ED%8F%BC/index.html)
+<img width="336" alt="네이버회원가입-이용약관폼" src="https://user-images.githubusercontent.com/45249021/105625452-d4869200-5e6c-11eb-9c55-2a9ea5d0bba8.png">
+[진행중](https://mirro97.github.io/diary-frontend/JavaScript/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%EC%95%BD%EA%B4%80%20%ED%8F%BC/index.html)
