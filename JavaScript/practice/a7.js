@@ -80,6 +80,7 @@ function printTriangle(n) {
   class Animal {
     constructor(name) {
       this.name = name;
+      
     }
   
     eat() {
