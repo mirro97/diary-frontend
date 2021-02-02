@@ -18,3 +18,8 @@ animal.push({
 
 console.log(animal);
 console.log(animal.length);
+
+const array = [1, true, {a: 1}, [1, 2, 3, 4]];
+array.push(6);
+
+console.log(array.length);
