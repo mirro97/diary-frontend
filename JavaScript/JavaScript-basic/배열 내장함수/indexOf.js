@@ -1,4 +1,5 @@
-//  indexOf: 배열에서 몇번째에 위치해있는지 알수 있음
+//  indexOf: 문자열에서 특정 문자열을 찾고,
+//           검색된 문자열이 '첫번째' 로 나타나는 위치의 index 리턴
 const superHeroes = ['아이언맨', '캡틴아메리카', '토르', '닥터 스트레인지'];
 
 const index1 = superHeroes.indexOf('토르');
