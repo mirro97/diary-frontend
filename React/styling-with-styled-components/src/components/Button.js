@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { darken, lighten, size } from "polished";
+import { darken, lighten } from "polished";
 
 const colorStyles = css`
   ${({ theme, color }) => {
@@ -48,10 +48,11 @@ const fullWidthStyle = css`
     props.fullWidth &&
     css`
       width: 100%;
-      justifiy-content: center;
+      justify-content: center;
+      align-items: center;
       & + & {
-          margin-left: 0;
-          margin-top-1rem;
+        margin-left: 0;
+        margin-top: 1rem;
       }
     `}
 `;
@@ -62,7 +63,6 @@ const sizeStyles = css`
     font-size: ${sizes[size].fontSize};
   `}
 `;
-
 const StyledButton = styled.button`
   /* 공통 스타일 */
   display: inline-flex;
@@ -76,24 +76,29 @@ const StyledButton = styled.button`
   padding-right: 1rem;
   align-items: center;
 
-  /* 크기 */
-  ${sizeStyles};
-
-  /* 색상 */
-  ${colorStyles};
-
-  /* fullWidth 스타일 */
-  ${fullWidthStyle};
-
   /* 기타 */
   & + & {
     margin-left: 1rem;
   }
+
+  /* 크기 */
+  ${sizeStyles}
+
+  /* 색상 */
+  ${colorStyles}
+
+  ${fullWidthStyle}
 `;
 
 function Button({ children, color, size, outline, fullWidth, ...rest }) {
   return (
-    <StyledButton color={color} size={size} outline={outline} {...rest}>
+    <StyledButton
+      color={color}
+      size={size}
+      outline={outline}
+      fullWidth={fullWidth}
+      {...rest}
+    >
       {children}
     </StyledButton>
   );
