@@ -38,8 +38,8 @@ function useAsync(callback, deps = [], skip = false) {
     try {
       const data = await callback();
       dispatch({ type: "SUCCESS", data });
-    } catch (e) {
-      dispatch({ type: "ERROR", error: e });
+    } catch {
+      dispatch({ type: "ERROR", error: 2 });
     }
   }, [callback]);
 
