@@ -1,9 +1,7 @@
 import React from "react";
 
 function Counter({ number, onIncrease, onDecrease }) {
-    
-
-    return (
+  return (
     <div>
       <h1>{number}</h1>
       <button onClick={onIncrease}>+1</button>
