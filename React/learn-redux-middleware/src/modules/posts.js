@@ -1,11 +1,12 @@
 import * as postsAPI from "../api/posts";
 import {
-  createPromiseThunk,
-  createPromiseThunkById,
   handleAsyncActions,
   handleAsyncActionsById,
   reducerUtils,
+  createPromiseSagaById,
+  createPromiseSaga,
 } from "../lib/asynUtils";
+import { takeEvery } from "redux-saga/effects";
 
 // 여러개를 불러오는 action
 const GET_POSTS = "GET_POSTS"; // 특정 요청이 시작되었다고 알리는 action
@@ -61,9 +62,18 @@ const CLEAR_POST = "CLEAR_POST";
     };
 */
 
+export const getPosts = () => ({ type: GET_POSTS });
+export const getPost = (id) => ({ type: GET_POST, payload: id, meta: id });
+
+const getPostsSaga = createPromiseSaga(GET_POSTS, postsAPI.getPosts);
+const getPostSaga = createPromiseSagaById(GET_POST, postsAPI.getPostById);
+
+export function* postsSaga() {
+  yield takeEvery(GET_POSTS, getPostsSaga);
+  yield takeEvery(GET_POST, getPostSaga);
+}
+
 // asyncUtils 사용한 후
-export const getPosts = createPromiseThunk(GET_POSTS, postsAPI.getPosts);
-export const getPost = createPromiseThunkById(GET_POST, postsAPI.getPostById);
 export const goToHome = () => (dispatch, getState, { history }) => {
   history.push("/");
 };

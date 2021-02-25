@@ -22,6 +22,7 @@
 // // 가짜 api 함수 2가지 만들기
 // export const getPosts = async () => {
 //   await sleep(500);
+
 //   return posts; // posts 배열
 // };
 
