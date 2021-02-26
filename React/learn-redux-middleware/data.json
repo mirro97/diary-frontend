@@ -2,18 +2,18 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "리덕스 미들웨어를 배우는중",
+      "body": "너무 어렵다..."
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "Redux-thunk 배우는중",
+      "body": "redux-thunk를 사용해서 비동기 작업 처리해보기"
+    },
+    {
+      "id": 3,
+      "title": "Redux-sage를 배우는중",
+      "body": "redux-sage도 곧 배울 예정!"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
