@@ -1,0 +1,19 @@
+// 프로젝트 최상단 폴더에 위치
+// 해당 설정에 따라 자바스크립트 파일에 영향을 주게됨
+{
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "module": "es6",
+        "rootDir": "src",
+        "outDir": "dist",
+        "target": "es5",
+        "sourceMap": true,
+        "removeComments": true,
+        "noImplicitAny": true
+    }
+}
