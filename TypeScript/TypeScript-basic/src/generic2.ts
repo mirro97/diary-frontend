@@ -1,8 +1,26 @@
-class LocalDB<T> {
+interface DB<T> {
+    add(v: T): void;
+    get(): T;
+}
+
+class D<T> implements DB<T> {
+    add(v: T): void {
+        throw new Error("Method not implemented.");
+    }
+    get(): T {
+        throw new Error("Method not implemented.");
+    }
+}
+
+interface JSONSerialier {
+    serialize(): string;
+}
+
+class LocalDB<T extends JSONSerialier> implements DB<T>{
     constructor(private localStroageKey: string){
     }   
     add(v: T){
-        localStorage.setItem(this.localStroageKey, JSON.stringify(v))
+        localStorage.setItem(this.localStroageKey, v.serialize());
     }
     get(): T{
         const v = localStorage.getItem(this.localStroageKey);
@@ -10,9 +28,25 @@ class LocalDB<T> {
     }
 }
 
-interface User {name: string};
+// 조건부 타입 -> generic에서 활용하기
+interface Vegitable{
+    v: string;
+}
 
-const userDb = new LocalDB<User>('user');
-userDb.add({name: 'sujeong'});
-const userA = userDb.get();
-userA.name;
+interface Meat{
+    m: string;
+}
+
+interface MartCart<T>{
+    getItem(): T extends Vegitable ? Vegitable : Meat;
+}
+
+const myCart: MartCart<Vegitable> = {
+    getItem() {
+        return {
+            v: ''
+        }
+    }
+}
+
+myCart.getItem();

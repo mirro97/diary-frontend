@@ -5,10 +5,8 @@ class Cart {
     }
     put(id, product) {
         this.user.name;
-        this.store[id] = product;
     }
     get(id) {
-        return this.store[id];
     }
 }
 class PromotionCart extends Cart {

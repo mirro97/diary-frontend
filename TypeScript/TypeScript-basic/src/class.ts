@@ -17,10 +17,10 @@ class Cart{
     }
     put(id: string, product: Product) {
         this.user.name;
-        this.store[id] = product;
+        // this.store[id] = product; -> 오류
     }
     get(id: string){
-        return this.store[id];
+        // return this.store[id]; -> 오류
     }
 }
 
