@@ -1,7 +1,7 @@
-function createUserAction(u, a) {
+function createUserActions(u, a) {
     return Object.assign(Object.assign({}, u), a);
 }
-const u = createUserAction({ name: 'sujeong' }, { do() { } });
+const u = createUserActions({ name: 'sujeong' }, { do() { } });
 function compare(x, y) {
     if (typeof x === 'number' && typeof y === 'number') {
         return x === y ? 0 : x > y ? 1 : -1;
@@ -14,3 +14,14 @@ function compare(x, y) {
 const v = compare(1, 2);
 console.log([3, 2, 1].sort(compare));
 console.log(['c', 'b', 'a'].sort(compare));
+function isAction(v) {
+    return v.do !== undefined;
+}
+function process(v) {
+    if (isAction(v)) {
+        v.do();
+    }
+    else {
+        console.log(v.name);
+    }
+}

@@ -5,11 +5,11 @@ interface Action {
     do(): void;
 }
 
-function createUserAction(u: User, a: Action) : User & Action {
+function createUserActions(u: User, a: Action) : User & Action {
     return {...u, ...a};
 }
 
-const u = createUserAction({name: 'sujeong'}, {do() {}});
+const u = createUserActions({name: 'sujeong'}, {do() {}});
 
 // function compare(x: string, y: string ) 
 // function compare(x: number, y: number ) 
